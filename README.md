@@ -1,6 +1,6 @@
 # TF2 Model Clones
 
-This repo provides code to convert a selection of popular models from a PyTorch model to a Tensorflow 2 model. Since many pretrained models are released in PyTorch and not TF2, this repo aims to help bridge the gap. The TF2 models are built with Keras and have fully functional forward and backward passes. The TF2 model outputs are near exact numeric matches to their PyTorch counterparts, up to numeric differences native to each language (for example, TF2 and PyTorch square root functions produce slightly different results given the same input).
+This repo provides code to convert a selection of popular models from a PyTorch format to a Tensorflow 2 format. Since many pretrained models are released in PyTorch and not TF2, this repo aims to help bridge the gap. The TF2 models are built with Keras and have fully functional forward and backward passes. The TF2 model outputs are near exact numeric matches to their PyTorch counterparts, up to numeric differences native to each language (for example, TF2 and PyTorch square root functions produce slightly different results given the same input).
 
 ## Supported Models
 
@@ -15,6 +15,10 @@ The models below are currently supported. Requests for conversion of other model
 | SNGAN | Celeb A 64x64 | save_celeb_a_sngan_tf2.ipynb | [link](https://github.com/kwotsin/mimicry) |
 | SNGAN | CIFAR-10 32x32 | save_cifar10_sngan_tf2.ipynb | [link](https://github.com/kwotsin/mimicry) |
 | CLIP | N/A | save_clip_tf2.ipynb | [link](https://github.com/openai/CLIP) |
+
+## Running a Conversion Script
+
+The BigGAN and CLIP conversion scripts will automatically download the PyTorch target model and can be run without manually saving the PyTorch weights. The SNGAN conversion scripts require you to manually download and specify paths to the PyTorch target model in the ```TORCH_FILE``` variable. The generator weights can be downloaded from the [Mimicry](https://github.com/kwotsin/mimicry) repo.
 
 ## Contact
 
